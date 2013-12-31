@@ -7,5 +7,5 @@ Redmine::Plugin.register :redmine_kup do
   name 'Redmine KUP plugin'
   author 'Thomas Kohler'
   description 'A Plugin to add some <Kohler Unified Process> specific traces like <Rational Unified Process>'
-  version '0.0.1'
+  version '0.0.2'
 end

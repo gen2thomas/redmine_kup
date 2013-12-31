@@ -12,7 +12,7 @@ module IssueRelationPatch
     # Same as typing in the class
     base.class_eval do
       unloadable # Send unloadable so it will not be unloaded in development
-      alias_method_chain :validate, :validate_kup #extend the original validater
+      alias_method_chain :validate_issue_relation, :validate_kup #extend the original validater
     end
   end
   
@@ -34,8 +34,8 @@ module IssueRelationPatch
     end
     
     #extend the original validater "validate"
-    def validate_with_validate_kup()
-      validate_without_validate_kup #this call the original one
+    def validate_issue_relation_with_validate_kup()
+      validate_issue_relation_without_validate_kup #this call the original one
       #validater for all issues
       #1.) <relates> are only possible between different issue tracker types
       if relation_type==IssueRelation::TYPE_RELATES
