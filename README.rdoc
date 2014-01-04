@@ -1,4 +1,4 @@
-= redmine_kup V0.0.2 (tested with redmine 2.3.1)
+= redmine_kup V0.1.0 (tested with redmine 2.3.1)
 == DE:
 Redmine KUP ergänzt das Standard Redmine um einige Bedingungen zum Anlegen von Beziehungen (Traces).
 

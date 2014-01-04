@@ -7,7 +7,7 @@ class CopyDefaultWorkflow < ActiveRecord::Migration
       if tracker.length != 0
         Role.find(:all).each do |role|
           #copy workflow from first tracker:
-          Workflow.copy(Tracker.find(:first), role, tracker, role)
+          WorkflowTransition.copy(Tracker.find(:first), role, tracker, role)
         end
       end
     end
